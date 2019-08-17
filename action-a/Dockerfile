@@ -11,6 +11,7 @@ LABEL "maintainer"="Octocat <octocat@github.com>"
 
 ADD entrypoint.sh /entrypoint.sh
 
+RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "cowsay"]
 
 ENTRYPOINT ["/entrypoint.sh"]
